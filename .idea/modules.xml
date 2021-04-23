@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/ActivityStudy.iml" filepath="$PROJECT_DIR$/.idea/ActivityStudy.iml" />
       <module fileurl="file://$PROJECT_DIR$/acti-springboot/acti-springboot.iml" filepath="$PROJECT_DIR$/acti-springboot/acti-springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/activity-test/activity-test.iml" filepath="$PROJECT_DIR$/activity-test/activity-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rest-test/rest-test.iml" filepath="$PROJECT_DIR$/rest-test/rest-test.iml" />
     </modules>
   </component>
 </project>
