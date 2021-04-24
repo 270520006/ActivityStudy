@@ -27,7 +27,7 @@ class ActiSpringbootApplicationTests {
 //        driver
         configuration.setJdbcDriver("com.mysql.cj.jdbc.Driver");
 //        放入url链接
-        configuration.setJdbcUrl("jdbc:mysql://localhost:3306/activit?serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true");
+        configuration.setJdbcUrl("jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true");
         configuration.setJdbcUsername("root");
         configuration.setJdbcPassword("123456");
 //        是否更新数据库，一定要填上是，不然白写

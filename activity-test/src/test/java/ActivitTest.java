@@ -14,6 +14,8 @@ public class ActivitTest {
 //        获取activity提供的工具类
 //        获取这个默认engine时就会自动创建数据库表
         ProcessEngine engine = ProcessEngines.getDefaultProcessEngine();
+        System.out.println(engine.getName());
+        System.out.println(engine.getTaskService());
         System.out.println(engine);
     }
     @Test
