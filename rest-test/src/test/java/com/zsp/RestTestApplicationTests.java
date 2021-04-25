@@ -3,6 +3,8 @@ package com.zsp;
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngines;
 import org.activiti.engine.task.Task;
+
+
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,12 +43,12 @@ class RestTestApplicationTests {
         processEngine.getRepositoryService()//得到库服务
                 .createDeployment()//创建部署
                 .name("askRest")
-                .addClasspathResource("bmp/test.bpmn20.xml") //导入流程图  !!!!一定要加bpmn20
-                .addClasspathResource("bmp/test.bpmn20.png")   //导入流程文件!!!!一定要加bpmn20
+                .addClasspathResource("bmp/rest.bpmn20.xml") //导入流程图  !!!!一定要加bpmn20
+                .addClasspathResource("bmp/rest.bpmn20.png")   //导入流程文件!!!!一定要加bpmn20
                 .deploy();   //开始部署
     }
 
-//2、启动流程实例
+//2、启用创建的流程图进行审批
 @Test
     public void testStartProcessInstance(){
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
@@ -61,7 +63,7 @@ class RestTestApplicationTests {
 //        获取activity7的引擎
     ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
 //    查看act_ru_task表，然后把id给上，发起请假申请
-    processEngine.getTaskService().complete("7505");
+    processEngine.getTaskService().complete("2505");
 
     }
 //    4、老师查看请假要求
@@ -71,7 +73,7 @@ public void queryTask(){
     ProcessEngine engine = ProcessEngines.getDefaultProcessEngine();
 //    创造搜索，下面的teacher是我们在创建bpmn的时候写的assignee值
     List<Task> student = engine.getTaskService().createTaskQuery()
-            .taskAssignee("teacher")
+            .taskAssignee("office")
             .list();
     for (Task task : student) {
         System.out.println(task);
@@ -85,7 +87,7 @@ public void testFinishTask_manager(){
     ProcessEngine engine = ProcessEngines.getDefaultProcessEngine();
 //    这里的id是上面查询生成的请假申请id
     engine.getTaskService()
-            .complete("10002");
+            .complete("10002");  //查看act_ru_task表，或者通过上面查询获得
 }
 
 
