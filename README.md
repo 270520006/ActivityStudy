@@ -2,6 +2,7 @@
 
 csdn地址：https://blog.csdn.net/qq_42388853/article/details/116136819
 
+github地址：https://github.com/270520006/ActivityStudy
 ***\*activity工作流\***
 
 Activity工作流的学习，想通过Activity工作流的形式去整合ELK、MQ和SpringCloud。 
